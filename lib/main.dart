@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:myapp/Home_screen.dart';
 import 'package:myapp/About_screen.dart';
 import 'package:myapp/Api_fetching.dart';
+// import '/app_theme.dart';
+import 'package:myapp/app_theme.dart';
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 
 // this is the root widget:
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -16,11 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home:DemmoNavigation()
+      theme: AppTheme.theme,
+      home: const DemmoNavigation(),
     );
   }
 }
@@ -61,8 +61,8 @@ class _DemmoNavigationState extends State<DemmoNavigation> {
   int selectedIndex=0;
 
   final List<Widget> screens=[
-    About_screen(),
     Home_screen(),
+    About_screen(),
     ApiFetching(),
   ];
 

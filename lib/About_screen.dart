@@ -41,13 +41,24 @@ class _About_screenState extends State<About_screen> {
   List comments=[];
 
   Future<void> getuser() async{
-    var response=await http.get(
-      Uri.parse("https://jsonplaceholder.typicode.com/users")
-    );
-    setState(() {
-      comments=jsonDecode(response.body);
-    });
+    try {
+      var response = await http.get(
+        Uri.parse("https://jsonplaceholder.typicode.com/users"),
+      );
 
+      if (response.statusCode == 200 && response.body.isNotEmpty) {
+        final decoded = jsonDecode(response.body);
+        if (decoded is List) {
+          setState(() {
+            comments = decoded;
+          });
+        }
+      }
+    } catch (_) {
+      setState(() {
+        comments = [];
+      });
+    }
   }
 
 
@@ -72,7 +83,12 @@ appBar: AppBar(
             leading: CircleAvatar(
               child: Text("${comments[index]["id"]}"),
             ),
-            title: Text(comments[index]["name"]),
+            title: Text(comments[index]["name"],
+              style: Theme.of(context)
+                  .textTheme.headlineLarge,),
+            subtitle:Text(comments[index]["name"],
+              style: Theme.of(context)
+                  .textTheme.bodyLarge,),
           );
         },
       )
