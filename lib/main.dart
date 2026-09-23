@@ -5,6 +5,7 @@ import 'package:myapp/Api_fetching.dart';
 // import '/app_theme.dart';
 import 'package:myapp/app_theme.dart';
 import 'package:myapp/auth/register_screen.dart';
+import 'package:myapp/screens/responsive_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.theme,
-      home: const register_screen(),
+      home: const ResponsiveScreen(),
     );
   }
 }
