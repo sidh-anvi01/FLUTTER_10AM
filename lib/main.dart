@@ -7,18 +7,27 @@ import 'package:myapp/app_theme.dart';
 import 'package:myapp/auth/register_screen.dart';
 import 'package:myapp/screens/responsive_screen.dart';
 import 'package:myapp/screens/device_features.dart';
+// import 'package:myapp/widgets/animated_container.dart';
+
+import 'package:myapp/widgets/AnimatedContainer_widget.dart';
 // import the provider package also
 // import the counter provider
 // import Counter_screen also
-void main() {
-  runApp(
-    ChangeNotifierProvider(
-      create:(context)=>
+// void main() {
+//   runApp(
+//     ChangeNotifierProvider(
+//       create:(context)=>
+//
+//           CounterProvider(),
+//       child:const MyApp(),
+//     )
+//   );
+// }
 
-          CounterProvider(),
-      child:const MyApp(),
-    )
-  );
+
+
+void main(){
+  runApp(const MyApp());
 }
 
 
@@ -33,7 +42,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.theme,
-      home: const counter_screen(),
+      home: const  animated_container(),
     );
   }
 }

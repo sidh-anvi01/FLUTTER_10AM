@@ -1,4 +1,46 @@
-// import every package wchich we need
+// // import every package wchich we need
+//
+// class counter_screen extends StatefulWidget {
+//   const counter_screen({super.key});
+//
+//   @override
+//   State<counter_screen> createState() => _counter_screenState();
+// }
+//
+// class _counter_screenState extends State<counter_screen> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Scaffold(
+//       body: Column(
+//         mainAxisAlignment: MainAxisAlignment.center,
+//         children: [
+//           Text("Counter Screen"),
+//
+//
+//           Text("  ${context.watch<CounterProvider>().count}  "),
+//
+//           ElevatedButton(
+//             onPressed: (){
+//               context.read<CounterProvider>().increament();
+//             },
+//             child:Text("increament ")
+//           ),
+//           ElevatedButton(
+//               onPressed: (){
+//                 context.read<CounterProvider>().decreament();
+//               },
+//               child:Text("decreament ")
+//           ),
+//
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+
+import 'package:flutter/material.dart';
 
 class counter_screen extends StatefulWidget {
   const counter_screen({super.key});
@@ -10,29 +52,12 @@ class counter_screen extends StatefulWidget {
 class _counter_screenState extends State<counter_screen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text("Counter Screen"),
-
-
-          Text("  ${context.watch<CounterProvider>().count}  "),
-
-          ElevatedButton(
-            onPressed: (){
-              context.read<CounterProvider>().increament();
-            },
-            child:Text("increament ")
-          ),
-          ElevatedButton(
-              onPressed: (){
-                context.read<CounterProvider>().decreament();
-              },
-              child:Text("decreament ")
-          ),
-
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Counter Screen"),
+      ),
+      body: const Center(
+        child: Text("Hello, World!"),
       ),
     );
   }
