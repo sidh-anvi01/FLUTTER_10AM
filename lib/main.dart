@@ -9,7 +9,7 @@ import 'package:myapp/screens/responsive_screen.dart';
 import 'package:myapp/screens/device_features.dart';
 // import 'package:myapp/widgets/animated_container.dart';
 
-import 'package:myapp/widgets/AnimatedContainer_widget.dart';
+import 'package:myapp/widgets/AnimatedOpacity_widget.dart';
 // import the provider package also
 // import the counter provider
 // import Counter_screen also
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppTheme.theme,
-      home: const  animated_container(),
+      home: const  animated_opacity(),
     );
   }
 }
