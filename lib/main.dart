@@ -3,14 +3,16 @@ import 'package:myapp/Home_screen.dart';
 import 'package:myapp/About_screen.dart';
 import 'package:myapp/Api_fetching.dart';
 // import '/app_theme.dart';
-import 'package:myapp/app_theme.dart';
-import 'package:myapp/auth/register_screen.dart';
-import 'package:myapp/screens/responsive_screen.dart';
-import 'package:myapp/screens/device_features.dart';
-// import 'package:myapp/widgets/animated_container.dart';
+// import 'package:myapp/app_theme.dart';
+// import 'package:myapp/auth/register_screen.dart';
+// import 'package:myapp/screens/responsive_screen.dart';
+// import 'package:myapp/screens/device_features.dart';
+// // import 'package:myapp/widgets/animated_container.dart';
 
-import 'package:myapp/widgets/AnimatedOpacity_widget.dart';
-import 'package:myapp/widgets/AnimatedScale_widget.dart';
+// import 'package:myapp/widgets/AnimatedOpacity_widget.dart';
+// import 'package:myapp/widgets/AnimatedScale_widget.dart';
+import 'package:myapp/widgets/AnimatedContainer_widget.dart';
+import 'package:myapp/widgets/AnimatedController_widget.dart';
 // import the provider package also
 // import the counter provider
 // import Counter_screen also
@@ -42,8 +44,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: AppTheme.theme,
-      home: const  animated_scale(),
+      // theme: AppTheme.theme,
+      home:   animated_controller(),
     );
   }
 }
